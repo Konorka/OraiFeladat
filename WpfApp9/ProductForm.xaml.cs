@@ -59,5 +59,10 @@ namespace WpfApp9
             
             DialogResult = false;
         }
+
+        private void ClosingButton(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var name = 
+        }
     }
 }

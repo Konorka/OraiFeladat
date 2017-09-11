@@ -26,6 +26,7 @@ namespace WpfApp9
         {
             InitializeComponent();
             DataContext = new MainViewModel();
+           
         }
 
         private void NewProductClick(object sender, RoutedEventArgs e)
@@ -49,7 +50,12 @@ namespace WpfApp9
 
         private void ModiProductClick(object sender, RoutedEventArgs e)
         {
+
             var modiProduct = ((MainViewModel)DataContext).SelectedProduct;
+            if (modiProduct==null)
+            {
+                return;
+            }
             var vm = new ProductFromViewModel
             {
                 Product = modiProduct
@@ -67,8 +73,6 @@ namespace WpfApp9
         {
             var deleteProduct = ((MainViewModel)DataContext).SelectedProduct;
             ((MainViewModel)DataContext).Products.Remove(deleteProduct);
-           
-
 
         }
     }

@@ -20,7 +20,7 @@
         </ListBox>
         <Button Content="Új" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="15,289,0,0" Click="NewProductClick"/>
         <Button Content="Törlés" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="262,289,0,0" Click="DeleteClick"/>
-        <Button Content="Módisít" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="140,289,0,0" Click="ModiProductClick"/>
+        <Button x:Name="modibutton" Content="Módisít" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="140,289,0,0" Click="ModiProductClick"/>
 
     </Grid>
 </Window>

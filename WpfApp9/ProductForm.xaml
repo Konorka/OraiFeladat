@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp9"
         mc:Ignorable="d"
-        Title="ProductForm" Height="197.727" Width="314.489">
+        Title="ProductForm" Height="197.727" Width="314.489" Closing="ClosingButton">
     <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="151*"/>
