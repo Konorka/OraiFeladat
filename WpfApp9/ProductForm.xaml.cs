@@ -10,26 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp9
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ProductForm.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductForm : Window
     {
-        public MainWindow()
+        public ProductForm()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
         }
 
-        private void NewProductClick(object sender, RoutedEventArgs e)
+        private void SaveClick(object sender, RoutedEventArgs e)
         {
-            var form = new ProductForm();
-            form.ShowDialog();
+            String textName = nameTextBox.Text;
+            int price;
+            int quantity;
         }
     }
 }

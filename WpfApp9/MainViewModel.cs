@@ -9,14 +9,14 @@ namespace WpfApp9
 {
     public class MainViewModel : BaseModel
     {
-        public ObservableCollection<Product> Product { get; set; }
+        public ObservableCollection<Product> Products { get; set; }
         public MainViewModel()
 
         {
-            Product = new ObservableCollection<Product>
+            Products = new ObservableCollection<Product>
                 {
-                    new Product {},
-                    new Product {}
+                    new Product {Name="Sajt", Price =2100, Quantity=1000},
+                    new Product {Name="Tej", Price =160, Quantity=1000}
             };
         }
         public Product SelectedProduct { get; set; }
