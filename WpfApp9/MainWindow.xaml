@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp9"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="350" Width="356.96">
+    <Grid Margin="0,0,2,0">
+        <ListBox SelectedItem="{Binding SelectedProduct}" ItemsSource="{Binding Product}" x:Name="productListBox" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="313" Margin="15,10,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                        <Label Content="{Binding Peice}"/>
+                        <Label Content="{Binding Quantity}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Új" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="15,289,0,0"/>
+        <Button Content="Törlés" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="262,289,0,0"/>
+        <Button Content="Módisít" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="140,289,0,0"/>
+
     </Grid>
 </Window>
