@@ -27,33 +27,36 @@ namespace WpfApp9
         private void SaveClick(object sender, RoutedEventArgs e)
         {
             String textName = nameTextBox.Text;
-            int price;
-            int quantity;
+            int help;
+            //Név
             if (string.IsNullOrEmpty(textName))
             {
                 MessageBox.Show("Töltse ki a nevet");
                 return;
             }
-            if (!(int.TryParse(priceTextBox.Text, out price)))
+            //Ár
+            if (!(int.TryParse(priceTextBox.Text, out help)))
             {
-                MessageBox.Show("Csak számot írjon ide");
+                MessageBox.Show("Csak számot írjon az árhoz");
                 return;
             }
             if (int.Parse(priceTextBox.Text)==0)
             {
-                MessageBox.Show("Nullánál nagyobb számot írjon");
+                MessageBox.Show("Az árhoz nullánál nagyobb számot írjon");
                 return;
             }
-            if (!(int.TryParse(quantityTextBox.Text, out quantity)))
+            //Mennyiség
+            if (!(int.TryParse(quantityTextBox.Text, out help)))
             {
-                MessageBox.Show("Csak számot írjon ide");
+                MessageBox.Show("Csak számot írjon a mennyiséghez");
                 return;
             }
             if (int.Parse(quantityTextBox.Text) == 0)
             {
-                MessageBox.Show("Nullánál nagyobb számot írjon");
+                MessageBox.Show("A mennyiséghez nullánál nagyobb számot írjon");
                 return;
             }
+            
             DialogResult = false;
         }
     }

@@ -16,7 +16,6 @@ namespace WpfApp9
             Products = new ObservableCollection<Product>
                 {
                     new Product {Name="Sajt", Price =2100, Quantity=1000},
-                    new Product {Name="Tej", Price =160, Quantity=1000}
             };
         }
         public Product SelectedProduct { get; set; }

@@ -20,6 +20,8 @@ namespace WpfApp9
     /// </summary>
     public partial class MainWindow : Window
     {
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
+      
         public MainWindow()
         {
             InitializeComponent();
@@ -28,8 +30,46 @@ namespace WpfApp9
 
         private void NewProductClick(object sender, RoutedEventArgs e)
         {
-            var form = new ProductForm();
+            var vm = new ProductFromViewModel
+            {
+                Product = new Product()
+
+            };
+            var form = new ProductForm
+            {
+                DataContext = vm
+
+            };
             form.ShowDialog();
+            ((MainViewModel)DataContext).Products.Add(vm.Product);
+
+        }
+
+       
+
+        private void ModiProductClick(object sender, RoutedEventArgs e)
+        {
+            var modiProduct = ((MainViewModel)DataContext).SelectedProduct;
+            var vm = new ProductFromViewModel
+            {
+                Product = modiProduct
+
+            };
+            var form = new ProductForm
+            {
+                DataContext = vm
+
+            };
+            form.ShowDialog();
+        }
+
+        private void DeleteClick(object sender, RoutedEventArgs e)
+        {
+            var deleteProduct = ((MainViewModel)DataContext).SelectedProduct;
+            ((MainViewModel)DataContext).Products.Remove(deleteProduct);
+           
+
+
         }
     }
 }
