@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="ProductForm" Height="197.727" Width="314.489">
     <Grid Margin="0,0,2,0">
-        <TextBox Name="nameTextBox" Text="{Binding Product.Name}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Margin="115,13,0,0"/>
-        <TextBox Name="priceTextBox" Text="{Binding Product.Price}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Margin="115,41,0,0"/>
-        <TextBox Name="quantityTextBox" Text="{Binding Product.Quantity}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Margin="115,69,0,0"/>
+        <TextBox Text="{Binding Product.Name}" Name="nameTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Margin="115,13,0,0"/>
+        <TextBox Text="{Binding Product.Price}" Name="priceTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Margin="115,41,0,0"/>
+        <TextBox Text="{Binding Product.Quantity}" Name="quantityTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Margin="115,69,0,0"/>
         <Button Content="Mentés" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="107,122,0,0" Click="SaveClick"/>
         <Label Content="Név:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,6,0,0"/>
         <Label Content="Ár:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,37,0,0"/>

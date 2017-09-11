@@ -29,6 +29,32 @@ namespace WpfApp9
             String textName = nameTextBox.Text;
             int price;
             int quantity;
+            if (string.IsNullOrEmpty(textName))
+            {
+                MessageBox.Show("Töltse ki a nevet");
+                return;
+            }
+            if (!(int.TryParse(priceTextBox.Text, out price)))
+            {
+                MessageBox.Show("Csak számot írjon ide");
+                return;
+            }
+            if (int.Parse(priceTextBox.Text)==0)
+            {
+                MessageBox.Show("Nullánál nagyobb számot írjon");
+                return;
+            }
+            if (!(int.TryParse(quantityTextBox.Text, out quantity)))
+            {
+                MessageBox.Show("Csak számot írjon ide");
+                return;
+            }
+            if (int.Parse(quantityTextBox.Text) == 0)
+            {
+                MessageBox.Show("Nullánál nagyobb számot írjon");
+                return;
+            }
+            DialogResult = false;
         }
     }
 }
