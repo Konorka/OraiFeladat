@@ -19,13 +19,18 @@ namespace WpfApp9
     /// </summary>
     public partial class ProductForm : Window
     {
+       
         public ProductForm()
         {
             InitializeComponent();
-        }
+           MainWindow.eXit = false;
+           MainWindow.saveButton = false;
 
+        }
+        
         private void SaveClick(object sender, RoutedEventArgs e)
         {
+            
             String textName = nameTextBox.Text;
             int help;
             //Név
@@ -56,13 +61,16 @@ namespace WpfApp9
                 MessageBox.Show("A mennyiséghez nullánál nagyobb számot írjon");
                 return;
             }
-            
+            MainWindow.saveButton = true;
             DialogResult = false;
         }
 
         private void ClosingButton(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            var name = 
+            MainWindow.eXit = false;
         }
+
+
     }
 }
+

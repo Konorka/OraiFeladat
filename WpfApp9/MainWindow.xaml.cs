@@ -20,13 +20,15 @@ namespace WpfApp9
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
-      
+        public static bool eXit=false;
+        public static bool saveButton = false;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new MainViewModel();
-           
+            
         }
 
         private void NewProductClick(object sender, RoutedEventArgs e)
@@ -42,8 +44,14 @@ namespace WpfApp9
 
             };
             form.ShowDialog();
-            ((MainViewModel)DataContext).Products.Add(vm.Product);
 
+            if (eXit==false&&saveButton==true)
+            {
+                ((MainViewModel)DataContext).Products.Add(vm.Product);
+            }
+
+
+            
         }
 
        
